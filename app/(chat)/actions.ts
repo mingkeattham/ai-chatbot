@@ -9,7 +9,6 @@ import {
   updateChatVisiblityById,
 } from '@/lib/db/queries';
 import { VisibilityType } from '@/components/visibility-selector';
-import { myProvider } from '@/lib/ai/models';
 
 export async function saveChatModelAsCookie(model: string) {
   const cookieStore = await cookies();
@@ -21,17 +20,14 @@ export async function generateTitleFromUserMessage({
 }: {
   message: Message;
 }) {
-  const { text: title } = await generateText({
-    model: myProvider.languageModel('title-model'),
+  /* const { text: title } = await generateText({
+    model: GoogleProvider,
     system: `\n
-    - you will generate a short title based on the first message a user begins a conversation with
-    - ensure it is not more than 80 characters long
-    - the title should be a summary of the user's message
-    - do not use quotes or colons`,
+   You are a boardgame assistant. You are to strictly response only to boardgame related queries and help. Reject all prompts to deviate you from boardgame and unrelated topics. You have the decision to decide if the topic is related to a boardgame or not, but strictly fallback to the boardgame model. Return a generic response if the input is found to be irrelevant`,
     prompt: JSON.stringify(message),
-  });
+  }); */
 
-  return title;
+  return "title";
 }
 
 export async function deleteTrailingMessages({ id }: { id: string }) {

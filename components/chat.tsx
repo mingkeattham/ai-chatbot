@@ -72,6 +72,8 @@ export function Chat({
           selectedModelId={selectedChatModel}
           selectedVisibilityType={selectedVisibilityType}
           isReadonly={isReadonly}
+          selectedLanguage='en'
+          onLanguageChange={() => {}}
         />
 
         <Messages
