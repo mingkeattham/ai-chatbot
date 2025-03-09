@@ -23,6 +23,7 @@
     "@ai-sdk/openai": "1.1.9",
     "@ai-sdk/provider": "^1.0.8",
     "@ai-sdk/provider-utils": "^2.1.0",
+    "@ai-sdk/react": "^1.1.21",
     "@codemirror/lang-javascript": "^6.2.2",
     "@codemirror/lang-python": "^6.1.6",
     "@codemirror/state": "^6.5.0",
